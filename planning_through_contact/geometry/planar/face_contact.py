@@ -929,6 +929,7 @@ class FaceContactMode(AbstractContactMode):
             var_idxs, evaluators = self._get_cost_terms(self.l2_norm_costs)
             vars = [vertex.x()[idxs] for idxs in var_idxs]
             bindings = [Binding[L2NormCost](e, v) for e, v in zip(evaluators, vars)]
+
             for b in bindings:
                 vertex.AddCost(b)
 

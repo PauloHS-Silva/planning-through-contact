@@ -11,11 +11,11 @@ matplotlib = "^3.6.1"
 # numpy = "^1.23.3"
 numpy = "^2"
 pre-commit = "^2.20.0"
-pdbpp = "^0.10.3"
+# pdbpp = "^0.10.3"
 tqdm = "^4.64.1"
 pydot = "^1.4.2"
 tk = "^0.1.0"
-drake = "^1.32"
+# drake = "^1.32"
 pytest = "^8.2.0"
 ffmpeg = "^1.4"
 ffmpeg-python = "^0.2.0"
@@ -25,9 +25,16 @@ hydra-core = "^1.3.2"
 omegaconf = "^2.3.0"
 underactuated = "^2024.4.27"
 pyyaml = "^6.0.1"
+# additional depeendecies for gcs_solver_bridges
+networkx = "^3.4.2"
+
+[[tool.poetry.packages]]
+include = "gcs_solver_bridges"
+
+[tool.poetry.dependencies.drake]
+path = "external_wheels/drake-2.0.0-cp312-cp312-manylinux_2_34_x86_64.whl"
 [tool.poetry.dependencies.gcs_solver]
 path = "external_wheels/gcs_solver-0.1-py3-none-manylinux2014_x86_64.whl"
-
 [tool.poetry.dependencies.common_utils]
 path = "external_wheels/common_utils-0.1-py3-none-manylinux2014_x86_64.whl"
 

@@ -122,6 +122,8 @@ class BandSparseSemidefiniteRelaxation:
         cost = self.prog.AddL2NormCost(A, b, vars)
         self.l2_norm_costs.append(cost)
 
+        # _, cost, _ = self.prog.AddL2NormCostUsingConicConstraint(A, b, vars)
+
         return cost
 
     def add_independent_cost(self, *args):

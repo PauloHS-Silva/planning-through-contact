@@ -1746,7 +1746,7 @@ def visualize_planar_pushing_start_and_goal(
             T_VW=T_VW,
             xlim=np.array([x_min, x_max]),
             ylim=np.array([y_min, y_max]),
-            show=show,
+            # show=show,
         )
         return visualizer
 
@@ -1813,7 +1813,7 @@ def visualize_planar_pushing_trajectory(
             T_VW=T_VW,
             xlim=np.array([x_min, x_max]),
             ylim=np.array([y_min, y_max]),
-            show=show,
+            # show=show,
         )
         return visualizer
 

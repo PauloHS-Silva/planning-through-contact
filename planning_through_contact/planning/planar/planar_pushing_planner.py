@@ -82,6 +82,7 @@ class PlanarPushingPlanner:
         self._build_graph()
 
         # costs for non-collisions are added by each of the separate subgraphs
+        i = 0
         for m, v in zip(self.contact_modes, self.contact_vertices):
             m.add_cost_to_vertex(v)
 
