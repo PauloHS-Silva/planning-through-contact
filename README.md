@@ -114,3 +114,7 @@ python scripts/planar_pushing/run_planar_pushing_experiment.py --config-name sin
 ```
 
 where `single_experiment` should be replaced with your config name.
+
+# Serializng the GCS instances
+
+Your entry point should be make_gcs_instance.py
