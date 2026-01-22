@@ -32,7 +32,7 @@ networkx = "^3.4.2"
 include = "gcs_solver_bridges"
 
 [tool.poetry.dependencies.drake]
-path = "external_wheels/drake-2.0.0-cp312-cp312-manylinux_2_34_x86_64.whl"
+path = "../../wheels/drake-2.0.0-cp312-cp312-manylinux_2_34_x86_64.whl"
 [tool.poetry.dependencies.gcs_solver]
 path = "external_wheels/gcs_solver-0.1-py3-none-manylinux2014_x86_64.whl"
 [tool.poetry.dependencies.common_utils]

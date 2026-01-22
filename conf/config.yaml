@@ -1,0 +1,12 @@
+defaults:
+  - planar_params: sugar_box_0.015_1_0.yaml
+  - _self_
+
+hydra:
+  run:
+    dir: ${dropbox_gcs_examples_path:}/${problem_relative_folder}
+
+problem_relative_folder: bernhard_planning_through_contact/outputs/${planar_params.slider_type}_${planar_params.pusher_radius}_${planar_params.seed}_${planar_params.idx_to_plan_for}
+solve_planar: true
+force_remake: false
+num_trials: 10

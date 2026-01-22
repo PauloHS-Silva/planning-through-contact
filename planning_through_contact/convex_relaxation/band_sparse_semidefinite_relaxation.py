@@ -388,11 +388,11 @@ class BandSparseSemidefiniteRelaxation:
 
                 # 0.5 x'Qx + b'x
                 const = 0.5 * coeffs.T @ X_vars + bTx
-                relaxed_prog.AddLinearConstraint(
-                    const,
-                    SCALE * eval.lower_bound(),
-                    SCALE * eval.upper_bound(),
-                )
+                # Drake's AddLinearConstraint with Expression expects scalar lb/ub
+                # np.asarray().item() handles both scalars and arrays (0-d or 1-element)
+                lb = float(np.asarray(SCALE * eval.lower_bound()).item())
+                ub = float(np.asarray(SCALE * eval.upper_bound()).item())
+                relaxed_prog.AddLinearConstraint(const, lb, ub)
 
         # Quadratic costs
         for (i, j), costs in self.quadratic_costs.items():
